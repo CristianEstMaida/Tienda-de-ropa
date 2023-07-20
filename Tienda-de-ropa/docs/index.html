@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda en línea</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Agrega tus estilos personalizados aquí -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1 id="online-store" >Tienda en línea</h1>
+    <nav>
+      <ul>
+        <li><a id="home-title" href="index.html">Inicio</a></li>
+        <!--li><a href="productos.html">Productos</a></li>
+        <li><a href="carrito.html">Carrito</a></li-->
+        <li><a id="contact-title" href="contacto.html">Contacto</a></li>
+        <li>
+          <select id="language-select">
+            <option value="es" selected>Español</option>
+            <option value="en">English</option>
+          </select>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2 id="highlighted-products-title">Productos destacados</h2>
+      <div class="product">
+        <img src="product1.jpg" alt="Remera">
+        <h3 id="t-shirt-title">Remera</h3>
+        <p id="price-t-shirt">Precio: $2999.99</p>
+        <button id="make-payment" onclick="window.location.href='https://mpago.la/1cuE48V'">Realizar pago en Mercado Pago</button>
+        <button id="add-t-shirt" onclick="addToCart({ name: 'Remera', price: 2999.99, image: 'product1.jpg' })">Agregar al carrito</button>
+      </div>
+
+      <div class="product">
+        <img src="product2.jpg" alt="Campera">
+        <h3 id="jacket-title">Campera</h3>
+        <p id="price-jacket">Precio: $14999.99</p>
+        <button id="add-jacket" onclick="addToCart({ name: 'Campera', price: 14999.99, image: 'product2.jpg'})">Agregar al carrito</button>
+      </div>
+
+      <!-- Agrega más productos aquí -->
+    </section>
+
+    <section>
+      <h2 id="products-title">Productos</h2>
+      <input type="text" id="search-input" placeholder="Buscar productos">
+      <button id="search-products-title" onclick="searchProducts()">Buscar</button>
+
+      <div id="product-list">
+        <!-- Los productos se agregarán aquí dinámicamente con JavaScript -->
+      </div>
+
+      <div id="pagination">
+        <!-- Los números de página se agregarán aquí dinámicamente con JavaScript -->
+      </div>
+    </section>
+
+    <section>
+      <h2 id="shopping-cart">Carrito de compras</h2>
+      <div id="cart-items">
+        <!-- Los productos en el carrito se agregarán aquí dinámicamente con JavaScript -->
+      </div>
+      <p>Total: <span id="cart-total">$0.00</span></p>
+      <button onclick="window.location.href='http://link.mercadopago.com.ar/colorium'">Realizar compra con Mercado Pago</button>
+      <button onclick="mostrarDatosTransferencia()">Realizar transferencia bancaria</button>
+      <p id="nombre" style="display: none;">Nombre: Cristian Esteban Maida</p>
+      <p id="cvu" style="display: none;">Número de CVU: 0000003100078348355281</p>
+      <p id="alias" style="display: none;">Alias: angus.rito.apios.mp</p>
+      <p id="cuit" style="display: none;">CUIT/CUIL: 20395500555</p>
+      <button onclick="generatePDF()">Realizar compra</button>
+    </section>
+
+    <section>
+        <h2 id="home-delivery">Envío a domicilio</h2>
+        <form id="contact-form">
+          <div>
+            <label id="name-title" for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div>
+            <label id="email-title" for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div>
+            <label id="address-title" for="message">Dirección:</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          
+          <button id="submit-title" type="submit">Enviar</button>
+        </form>
+    </section>  
+  </main>
+
+  <footer>
+    <a href="https://www.instagram.com/coloriumrockband_official/" target="_blank" rel="noopener noreferrer">
+    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 448 512">
+      <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
+    </svg>
+    </a>
+    <a href="http://qr.afip.gob.ar/?qr=hnazZoCRKo06NlZZpWGOTw,," target="_F960AFIPInfo"><img src="http://www.afip.gob.ar/images/f960/DATAWEB.jpg"></a>
+    <p id="footer-copyright">Derechos de autor &copy; 2023 Tienda en línea. Todos los derechos reservados.</p>
+    
+  </footer>
+
+  <script src ="script.js">
+
+    
+  </script>
+</body>
+</html>
