@@ -137,8 +137,8 @@
       priceJacket.innerText = languageTexts.priceJacket;
       productsTitle.innerText = languageTexts.productsTitle;
       addJacket.innerText = languageTexts.addJacket;
-      priceLabelElement.innerText = priceLabel;
-      addToCartBtnElement.innerText = addToCartBtnText;
+      //priceLabelElement.innerText = priceLabel;
+      //addToCartBtnElement.innerText = addToCartBtnText;
       shoppingCart.innerText = languageTexts.shoppingCart;
       homeDelivery.innerText = languageTexts.homeDelivery;
       nameTitle.innerText = languageTexts.nameTitle;
