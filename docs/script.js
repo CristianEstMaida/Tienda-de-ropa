@@ -87,8 +87,8 @@
     // Obtener el elemento del input de búsqueda
     const searchInput = document.getElementById("search-input");
     const searchProductsTitle = document.getElementById("search-products-title");
-    const priceLabels = document.querySelectorAll(".product p.price");
-    const addToCartButtons = document.querySelectorAll(".product button");
+    const priceLabels = document.querySelectorAll(".product .product p.price");
+    const addToCartButtons = document.querySelectorAll(".product .product button");
     const shoppingCart = document.getElementById("shopping-cart");
     const homeDelivery = document.getElementById("home-delivery");
     const nameTitle = document.getElementById("name-title");
