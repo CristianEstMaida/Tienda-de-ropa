@@ -163,7 +163,7 @@
       searchProductsTitle.innerText = languageTexts.searchProductsTitle;
       // Actualizar los productos según el idioma seleccionado
       products.splice(0, products.length, ...languageProducts); // Reemplazar los productos con los correspondientes al idioma seleccionado
-      showProducts(); // Mostrar los productos actualizados
+      showProducts(priceLabel, addToCartBtnText); // Mostrar los productos actualizados
       generatePagination();
     }
 
@@ -387,7 +387,7 @@
     //let currentPage = 1;
 
     // Función para mostrar los productos en la página actual
-    function showProducts() {
+    function showProducts(priceLabel, addToCartBtnText) {
     const productList = document.getElementById("product-list");
     productList.innerHTML = "";
 
