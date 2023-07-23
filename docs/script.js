@@ -138,13 +138,13 @@
       footerCopyright.innerText = languageTexts.footerText;
 
       // Modificar el contenido del párrafo "Precio:" y el texto del botón "Agregar al carrito"
-      /*priceLabels.forEach((priceLabel) => {
+      priceLabels.forEach((priceLabel) => {
         priceLabel.innerText = priceLabelText;
       });
     
       addToCartButtons.forEach((button) => {
         button.innerText = addToCartButtonText;
-      });*/
+      });
     
       // Obtener el texto del placeholder en el idioma seleccionado
       const placeholderText = languageTexts.searchPlaceholder;
