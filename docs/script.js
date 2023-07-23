@@ -17,6 +17,7 @@
         searchPlaceholder: "Buscar productos",
         searchProductsTitle: "Buscar",
         priceLabel: "Precio:",
+        addToCartBtn: "Agregar al carrito",
         addToCartButton: "Agregar al carrito",
         shoppingCart: "Carrito de compras",
         homeDelivery: "Envío a domicilio",
@@ -45,6 +46,7 @@
         searchProductsTitle: "Search",
         priceLabel: "Price:",
         addToCartButton: "Add to cart",
+        addToCartBtn: "Add to cart",
         shoppingCart: "Shopping cart",
         homeDelivery: "Home delivery",
         nameTitle: "Name",
@@ -87,6 +89,10 @@
     // Obtener el elemento del input de búsqueda
     const searchInput = document.getElementById("search-input");
     const searchProductsTitle = document.getElementById("search-products-title");
+    // Actualizar el contenido del párrafo "Precio:"
+    const priceLabelElement = document.getElementById("price-label");
+    // Actualizar el contenido del botón "Agregar al carrito"
+    const addToCartBtnElement = document.getElementById("add-to-cart-btn");
     const priceLabels = document.querySelectorAll(".product p.price");
     const addToCartButtons = document.querySelectorAll(".product button");
     const shoppingCart = document.getElementById("shopping-cart");
@@ -108,6 +114,8 @@
       const selectedLanguage = languageSelect.value;
       const languageTexts = languages[selectedLanguage];
       const languageProducts = productsTexts[selectedLanguage];
+      const priceLabel = languageTexts.priceLabel;
+      const addToCartBtnText = languageTexts.addToCartBtn;
 
       // Obtener el texto para el párrafo "Precio:" y el botón "Agregar al carrito"
       const priceLabelText = languageTexts.priceLabel;
@@ -129,6 +137,8 @@
       priceJacket.innerText = languageTexts.priceJacket;
       productsTitle.innerText = languageTexts.productsTitle;
       addJacket.innerText = languageTexts.addJacket;
+      priceLabelElement.innerText = priceLabel;
+      addToCartBtnElement.innerText = addToCartBtnText;
       shoppingCart.innerText = languageTexts.shoppingCart;
       homeDelivery.innerText = languageTexts.homeDelivery;
       nameTitle.innerText = languageTexts.nameTitle;
@@ -353,9 +363,9 @@
         productDiv.innerHTML = `
             <img src="${product.image}" alt="${product.name}">
             <h3>${product.name}</h3>
-            <p>Precio: $${product.price}</p>
+            <p="price-label">Precio: $${product.price}</p>
             <p>${product.description}</p>
-            <button onclick="addToCart({ name: '${product.name}', price: ${product.price}, image: '${product.image}' })">Agregar al carrito</button>
+            <button id="add-to-cart-btn" onclick="addToCart({ name: '${product.name}', price: ${product.price}, image: '${product.image}' })">Agregar al carrito</button>
         `;
 
         productList.appendChild(productDiv);
@@ -393,9 +403,9 @@
           <!--div class="product"-->
             <img src="product${i + 1}.jpg" alt="${product.name}">
             <h3>${product.name}</h3>
-            <p>Precio: $${product.price}</p>
+            <p="price-label">Precio: $${product.price}</p>
             <p>${product.description}</p>
-            <button onclick="addToCart({ name: '${product.name}', price: ${product.price}, image: '${product.image}' })">Agregar al carrito</button>
+            <button id="add-to-cart-btn" onclick="addToCart({ name: '${product.name}', price: ${product.price}, image: '${product.image}' })">Agregar al carrito</button>
           <!--/div-->
         `;
 
