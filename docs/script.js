@@ -16,6 +16,8 @@
         productsTitle: "Productos",
         searchPlaceholder: "Buscar productos",
         searchProductsTitle: "Buscar",
+        priceLabel: "Precio:",
+        addToCartButton: "Agregar al carrito",
         shoppingCart: "Carrito de compras",
         homeDelivery: "Envío a domicilio",
         nameTitle: "Nombre",
@@ -40,7 +42,9 @@
         addJacket: "Add to cart",
         productsTitle: "Products",
         searchPlaceholder: "Search products",
-        searchProductsTitle: "Search",  
+        searchProductsTitle: "Search",
+        priceLabel: "Price:",
+        addToCartButton: "Add to cart",
         shoppingCart: "Shopping cart",
         homeDelivery: "Home delivery",
         nameTitle: "Name",
@@ -83,6 +87,8 @@
     // Obtener el elemento del input de búsqueda
     const searchInput = document.getElementById("search-input");
     const searchProductsTitle = document.getElementById("search-products-title");
+    const priceLabels = document.querySelectorAll(".product p.price");
+    const addToCartButtons = document.querySelectorAll(".product button");
     const shoppingCart = document.getElementById("shopping-cart");
     const homeDelivery = document.getElementById("home-delivery");
     const nameTitle = document.getElementById("name-title");
@@ -126,6 +132,16 @@
       addressTitle.innerText = languageTexts.addressTitle;
       submitTitle.innerText = languageTexts.submitTitle;
       footerCopyright.innerText = languageTexts.footerText;
+
+      // Modificar el contenido del párrafo "Precio:" y el texto del botón "Agregar al carrito"
+      priceLabels.forEach((priceLabel) => {
+        priceLabel.innerText = priceLabelText;
+      });
+    
+      addToCartButtons.forEach((button) => {
+        button.innerText = addToCartButtonText;
+      });
+    
       // Obtener el texto del placeholder en el idioma seleccionado
       const placeholderText = languageTexts.searchPlaceholder;
       // Modificar el texto del placeholder
