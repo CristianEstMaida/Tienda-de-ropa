@@ -114,12 +114,12 @@
       const selectedLanguage = languageSelect.value;
       const languageTexts = languages[selectedLanguage];
       const languageProducts = productsTexts[selectedLanguage];
-      //const priceLabel = languageTexts.priceLabel;
-      //const addToCartBtnText = languageTexts.addToCartBtn;
+      const priceLabel = languageTexts.priceLabel;
+      const addToCartBtnText = languageTexts.addToCartBtn;
 
       // Obtener el texto para el párrafo "Precio:" y el botón "Agregar al carrito"
-      const priceLabelText = languageTexts.priceLabel;
-      const addToCartButtonText = languageTexts.addToCartButton;
+      //const priceLabelText = languageTexts.priceLabel;
+      //const addToCartButtonText = languageTexts.addToCartButton;
 
       // Configuración de paginación
       
