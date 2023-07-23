@@ -410,6 +410,13 @@
         `;
 
         productList.appendChild(productDiv);
+
+        // Actualizar el contenido del párrafo "Precio:" y el botón "Agregar al carrito"
+        const priceLabelElement = productDiv.querySelector("#price-label");
+        const addToCartBtnElement = productDiv.querySelector("#add-to-cart-btn");
+    
+        priceLabelElement.innerText = priceLabel;
+        addToCartBtnElement.innerText = addToCartBtnText;
     }
     }
 
