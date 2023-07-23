@@ -415,8 +415,8 @@
         const priceLabelElement = productDiv.querySelector("#price-label");
         const addToCartBtnElement = productDiv.querySelector("#add-to-cart-btn");
     
-        priceLabelElement.innerText = priceLabel;
-        addToCartBtnElement.innerText = addToCartBtnText;
+        //priceLabelElement.innerText = priceLabel;
+        //addToCartBtnElement.innerText = addToCartBtnText;
     }
     }
 
