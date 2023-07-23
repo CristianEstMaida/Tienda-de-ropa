@@ -18,7 +18,7 @@
         searchProductsTitle: "Buscar",
         priceLabel: "Precio:",
         addToCartBtn: "Agregar al carrito",
-        addToCartButton: "Agregar al carrito",
+        //addToCartButton: "Agregar al carrito",
         shoppingCart: "Carrito de compras",
         homeDelivery: "Envío a domicilio",
         nameTitle: "Nombre",
@@ -45,7 +45,7 @@
         searchPlaceholder: "Search products",
         searchProductsTitle: "Search",
         priceLabel: "Price:",
-        addToCartButton: "Add to cart",
+        //addToCartButton: "Add to cart",
         addToCartBtn: "Add to cart",
         shoppingCart: "Shopping cart",
         homeDelivery: "Home delivery",
@@ -93,8 +93,8 @@
     const priceLabelElement = document.getElementById("price-label");
     // Actualizar el contenido del botón "Agregar al carrito"
     const addToCartBtnElement = document.getElementById("add-to-cart-btn");
-    const priceLabels = document.querySelectorAll(".product p.price");
-    const addToCartButtons = document.querySelectorAll(".product button");
+    //const priceLabels = document.querySelectorAll(".product p.price");
+    //const addToCartButtons = document.querySelectorAll(".product button");
     const shoppingCart = document.getElementById("shopping-cart");
     const homeDelivery = document.getElementById("home-delivery");
     const nameTitle = document.getElementById("name-title");
@@ -114,8 +114,8 @@
       const selectedLanguage = languageSelect.value;
       const languageTexts = languages[selectedLanguage];
       const languageProducts = productsTexts[selectedLanguage];
-      const priceLabel = languageTexts.priceLabel;
-      const addToCartBtnText = languageTexts.addToCartBtn;
+      //const priceLabel = languageTexts.priceLabel;
+      //const addToCartBtnText = languageTexts.addToCartBtn;
 
       // Obtener el texto para el párrafo "Precio:" y el botón "Agregar al carrito"
       const priceLabelText = languageTexts.priceLabel;
@@ -148,13 +148,13 @@
       footerCopyright.innerText = languageTexts.footerText;
 
       // Modificar el contenido del párrafo "Precio:" y el texto del botón "Agregar al carrito"
-      priceLabels.forEach((priceLabel) => {
+      /*priceLabels.forEach((priceLabel) => {
         priceLabel.innerText = priceLabelText;
       });
     
       addToCartButtons.forEach((button) => {
         button.innerText = addToCartButtonText;
-      });
+      });*/
     
       // Obtener el texto del placeholder en el idioma seleccionado
       const placeholderText = languageTexts.searchPlaceholder;
