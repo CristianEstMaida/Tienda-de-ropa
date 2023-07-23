@@ -101,6 +101,44 @@ h2 {
     cursor: pointer;
 }
 
+/* Estilos de los productos */
+.highlighted-product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.highlighted-product img {
+    max-width: 100%;
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.highlighted-product h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.highlighted-product p {
+    margin: 5px 0;
+}
+
+.highlighted-product button {
+    background-color: #333333;
+    color: #ffffff;
+    border: none;
+    margin: 5px 0px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
 /* Estilos del carrito de compras */
 .cart-item {
     flex: 0 0 100%;
