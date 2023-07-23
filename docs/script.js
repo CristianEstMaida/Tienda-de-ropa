@@ -390,13 +390,13 @@
         const productDiv = document.createElement("div");
         productDiv.classList.add("product");
         productDiv.innerHTML = `
-          //<div class="product">
+          <!--div class="product"-->
             <img src="product${i + 1}.jpg" alt="${product.name}">
             <h3>${product.name}</h3>
             <p>Precio: $${product.price}</p>
             <p>${product.description}</p>
             <button onclick="addToCart({ name: '${product.name}', price: ${product.price}, image: '${product.image}' })">Agregar al carrito</button>
-          //</div>
+          <!--/div-->
         `;
 
         productList.appendChild(productDiv);
