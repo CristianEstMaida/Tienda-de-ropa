@@ -105,6 +105,7 @@
     // Obtener el elemento del input de búsqueda
     const searchInput = document.getElementById("search-input");
     const searchProductsTitle = document.getElementById("search-products-title");
+    const searchProductsBtn = document.getElementById("search-products-title");
     // Actualizar el contenido del párrafo "Precio:"
     const priceLabelElement = document.getElementById("price-label");
     // Actualizar el contenido del botón "Agregar al carrito"
@@ -208,7 +209,7 @@
       // Actualizar los productos según el idioma seleccionado
       products.splice(0, products.length, ...languageProducts); // Reemplazar los productos con los correspondientes al idioma seleccionado
       // Agregar el evento click al botón
-      searchProductsTitle.addEventListener("click", searchProducts(priceLabel, addToCartBtnText, searchBtnText));
+      searchProductsBtn.addEventListener("click", searchProducts(priceLabel, addToCartBtnText, searchBtnText));
       showProducts(priceLabel, addToCartBtnText); // Mostrar los productos actualizados
       generatePagination();
     }
