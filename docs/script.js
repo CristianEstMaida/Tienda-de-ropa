@@ -377,9 +377,9 @@
         productDiv.innerHTML = `
             <img src="${product.image}" alt="${product.name}">
             <h3>${product.name}</h3>
-            <p="price-label">Precio: $${product.price}</p>
+            <p="price-label">${priceLabel} $${product.price}</p>
             <p>${product.description}</p>
-            <button id="add-to-cart-btn" data-lang="Add to cart" onclick="addToCart({ name: '${product.name}', price: ${product.price}, image: '${product.image}' })">Agregar al carrito</button>
+            <button id="add-to-cart-btn" data-lang="Add to cart" onclick="addToCart({ name: '${product.name}', price: ${product.price}, image: '${product.image}' })">${addToCartBtnText}</button>
         `;
 
         productList.appendChild(productDiv);
