@@ -165,7 +165,7 @@
       makePayment.innerText = languageTexts.makePayment;
       jacketTitle.innerText = languageTexts.jacketTitle;  
       priceJacket.innerText = languageTexts.priceJacket;
-      searchProductsElement.innerText = languageTexts.searchProductsTitle;
+      searchProductsElement.innerText = searchBtnText;
       productsTitle.innerText = languageTexts.productsTitle;
       addJacket.innerText = languageTexts.addJacket;
       //priceLabelElement.innerText = priceLabel;
@@ -205,7 +205,7 @@
       const placeholderText = languageTexts.searchPlaceholder;
       // Modificar el texto del placeholder
       searchInput.placeholder = placeholderText;
-      searchProductsTitle.innerText = languageTexts.searchProductsTitle;
+      //searchProductsTitle.innerText = languageTexts.searchProductsTitle;
       // Actualizar los productos según el idioma seleccionado
       products.splice(0, products.length, ...languageProducts); // Reemplazar los productos con los correspondientes al idioma seleccionado
       // Agregar el evento click al botón
