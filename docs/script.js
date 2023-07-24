@@ -494,7 +494,7 @@
     }
 
     // Agregar el evento click al botón "Buscar"
-    searchProductsTitle.addEventListener("click", () => {
+    searchProductsBtn.addEventListener("click", () => {
       const priceLabel = languages[languageSelect.value].priceLabel;
       const addToCartBtnText = languages[languageSelect.value].addToCartBtn;
       const searchBtnText = languageTexts.searchProductsTitle;
