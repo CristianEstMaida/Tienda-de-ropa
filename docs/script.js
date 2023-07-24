@@ -206,7 +206,7 @@
       // Actualizar los productos según el idioma seleccionado
       products.splice(0, products.length, ...languageProducts); // Reemplazar los productos con los correspondientes al idioma seleccionado
       // Agregar el evento click al botón
-      //searchProductsTitle.addEventListener("click", searchProducts);
+      searchProductsTitle.addEventListener("click", searchProducts(priceLabel, addToCartBtnText, searchBtnText));
       showProducts(priceLabel, addToCartBtnText); // Mostrar los productos actualizados
       generatePagination();
     }
