@@ -164,7 +164,7 @@
       mercadoPagoBtn.innerText = languageTexts.makePayment;
       transferenciaBtn.innerText = languageTexts.transferPayment;
       cvuElement.innerText = languageTexts.cvuTitle + ": " + languageTexts.cvuEjemplo;
-      
+      aliasElement.innerText = languageTexts.aliasTitle + ": " + languageTexts.aliasEjemplo;
       homeDelivery.innerText = languageTexts.homeDelivery;
       nameTitle.innerText = languageTexts.nameTitle;
       emailTitle.innerText = languageTexts.emailTitle;
