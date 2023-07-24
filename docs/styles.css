@@ -168,6 +168,10 @@ h2 {
     font-weight: bold;
 }
 
+#eliminar{
+    margin: 5px 0;
+}
+
 /* Estilos del formulario de contacto */
 form {
     max-width: 400px;
