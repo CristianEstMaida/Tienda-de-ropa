@@ -23,6 +23,7 @@
         makePayment: "Realizar pago en Mercado Pago",
         transferPayment: "Realizar transferencia bancaria",
         cvuTitle: "Número de CVU",
+        aliasTitle: "Alias",
         cvuEjemplo: "0000003100078348355281",
         aliasEjemplo: "angus.rito.apios.mp",
         homeDelivery: "Envío a domicilio",
@@ -56,6 +57,7 @@
         makePayment: "Make payment in Mercado Pago",
         transferPayment: "Make bank transfer",
         cvuTitle: "CBU Number",
+        aliasTitle: "Alias",
         cvuEjemplo: "0110052531005208960734",
         aliasEjemplo: "ALARMA.PUERTA.GATA",
         homeDelivery: "Home delivery",
@@ -107,6 +109,12 @@
     //const addToCartButtons = document.querySelectorAll(".product button");
     const shoppingCart = document.getElementById("shopping-cart");
     const homeDelivery = document.getElementById("home-delivery");
+    // Actualizar el contenido de los botones de compra
+    const mercadoPagoBtn = document.getElementById("mercado-pago-btn");
+    const transferenciaBtn = document.getElementById("transferencia-btn");
+    const cvuElement = document.getElementById("cvu");
+    const aliasElement = document.getElementById("alias");
+    const cuitElement = document.getElementById("cuit");
     const nameTitle = document.getElementById("name-title");
     const emailTitle = document.getElementById("email-title");
     const addressTitle = document.getElementById("address-title");
@@ -153,6 +161,10 @@
       //priceLabelElement.innerText = priceLabel;
       //addToCartBtnElement.innerText = addToCartBtnText;
       shoppingCart.innerText = languageTexts.shoppingCart;
+      mercadoPagoBtn.innerText = languageTexts.makePayment;
+      transferenciaBtn.innerText = languageTexts.transferPayment;
+      cvuElement.innerText = languageTexts.cvuTitle + ": " + languageTexts.cvuEjemplo;
+      
       homeDelivery.innerText = languageTexts.homeDelivery;
       nameTitle.innerText = languageTexts.nameTitle;
       emailTitle.innerText = languageTexts.emailTitle;
