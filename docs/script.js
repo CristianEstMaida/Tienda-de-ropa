@@ -142,6 +142,7 @@
       const languageProducts = productsTexts[selectedLanguage];
       const priceLabel = languageTexts.priceLabel;
       const addToCartBtnText = languageTexts.addToCartBtn;
+      const searchBtnText = languageTexts.searchProductsTitle;
 
       // Obtener el texto para el párrafo "Precio:" y el botón "Agregar al carrito"
       //const priceLabelText = languageTexts.priceLabel;
@@ -388,7 +389,7 @@
     }
 
     // Función para buscar productos
-    function searchProducts(priceLabel, addToCartBtnText) {
+    function searchProducts(priceLabel, addToCartBtnText, searchBtnText) {
     const searchInput = document.getElementById("search-input");
     const searchTerm = searchInput.value.toLowerCase().trim();
 
@@ -493,7 +494,8 @@
     searchProductsTitle.addEventListener("click", () => {
       const priceLabel = languages[languageSelect.value].priceLabel;
       const addToCartBtnText = languages[languageSelect.value].addToCartBtn;
-      searchProducts(priceLabel, addToCartBtnText);
+      const searchBtnText = languageTexts.searchProductsTitle;
+      searchProducts(priceLabel, addToCartBtnText, searchBtnText);
     });
 
     // Mostrar productos y generar paginación inicial
