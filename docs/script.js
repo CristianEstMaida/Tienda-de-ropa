@@ -113,7 +113,7 @@
     //searchProductsTitle.addEventListener("click", searchProducts);
 
     // Función para cambiar el idioma
-    function changeLanguage() {
+    function changeLanguage(searchProductsTitle) {
       const selectedLanguage = languageSelect.value;
       const languageTexts = languages[selectedLanguage];
       const languageProducts = productsTexts[selectedLanguage];
@@ -185,7 +185,7 @@
     languageSelect.addEventListener("change", changeLanguage);
 
     // Cambiar el idioma inicialmente
-    changeLanguage();
+    changeLanguage(searchProductsTitle );
     //generatePagination();
 
     const contactForm = document.getElementById("contact-form");
