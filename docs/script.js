@@ -139,12 +139,12 @@
     // Función para cambiar el idioma
     function changeLanguage(searchProductsTitle) {
       const selectedLanguage = languageSelect.value;
+      languageTexts = languages[selectedLanguage]; // Assign the languageTexts at the global scope 
       
       const languageProducts = productsTexts[selectedLanguage];
       const priceLabel = languageTexts.priceLabel;
       const addToCartBtnText = languageTexts.addToCartBtn;
       const searchBtnText = languageTexts.searchProductsTitle;
-      languageTexts = languages[selectedLanguage]; // Assign the languageTexts at the global scope
         
       // Obtener el texto para el párrafo "Precio:" y el botón "Agregar al carrito"
       //const priceLabelText = languageTexts.priceLabel;
