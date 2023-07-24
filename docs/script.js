@@ -155,6 +155,15 @@
       addToCartButtons.forEach((button) => {
         button.innerText = addToCartButtonText;
       });*/
+
+      // Actualizar el texto del botón "Agregar al carrito" en cada producto
+      const productButtons = document.querySelectorAll(".product button");
+      productButtons.forEach(button => {
+        const originalText = button.getAttribute("data-lang");
+        if (originalText === addToCartBtnText) {
+          button.innerText = addToCartBtnText;
+        }
+      });
     
       // Obtener el texto del placeholder en el idioma seleccionado
       const placeholderText = languageTexts.searchPlaceholder;
@@ -365,7 +374,7 @@
             <h3>${product.name}</h3>
             <p="price-label">Precio: $${product.price}</p>
             <p>${product.description}</p>
-            <button id="add-to-cart-btn" onclick="addToCart({ name: '${product.name}', price: ${product.price}, image: '${product.image}' })">Agregar al carrito</button>
+            <button id="add-to-cart-btn" data-lang="Add to cart" onclick="addToCart({ name: '${product.name}', price: ${product.price}, image: '${product.image}' })">Agregar al carrito</button>
         `;
 
         productList.appendChild(productDiv);
@@ -405,7 +414,7 @@
             <h3>${product.name}</h3>
             <p="price-label">Precio: $${product.price}</p>
             <p>${product.description}</p>
-            <button id="add-to-cart-btn" onclick="addToCart({ name: '${product.name}', price: ${product.price}, image: '${product.image}' })">Agregar al carrito</button>
+            <button id="add-to-cart-btn" data-lang="Add to cart" onclick="addToCart({ name: '${product.name}', price: ${product.price}, image: '${product.image}' })">Agregar al carrito</button>
           <!--/div-->
         `;
 
