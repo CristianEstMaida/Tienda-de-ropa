@@ -329,7 +329,7 @@
         cartItem.innerHTML = `
           <img src="${product.image}" alt="${product.name}">
           <p>${product.name} - $${product.price}</p>
-          <button onclick="removeFromCart(${index})">Eliminar</button>
+          <button id="eliminar" onclick="removeFromCart(${index})">Eliminar</button>
         `;
 
         cartItemsContainer.appendChild(cartItem);
