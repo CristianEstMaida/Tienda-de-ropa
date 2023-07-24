@@ -104,7 +104,7 @@
     const productsTitle = document.getElementById("products-title");
     // Obtener el elemento del input de búsqueda
     const searchInput = document.getElementById("search-input");
-    const searchProductsTitle = document.getElementById("search-products-title");
+    const searchProductsElement = document.getElementById("search-products-title");
     const searchProductsBtn = document.getElementById("search-products-title");
     // Actualizar el contenido del párrafo "Precio:"
     const priceLabelElement = document.getElementById("price-label");
@@ -165,7 +165,7 @@
       makePayment.innerText = languageTexts.makePayment;
       jacketTitle.innerText = languageTexts.jacketTitle;  
       priceJacket.innerText = languageTexts.priceJacket;
-      searchProductsTitle.innerText = languageTexts.searchProductsTitle;
+      searchProductsElement.innerText = languageTexts.searchProductsTitle;
       productsTitle.innerText = languageTexts.productsTitle;
       addJacket.innerText = languageTexts.addJacket;
       //priceLabelElement.innerText = priceLabel;
