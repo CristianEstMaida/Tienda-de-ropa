@@ -116,7 +116,7 @@
     // Actualizar el contenido de los botones de compra
     const mercadoPagoBtn = document.getElementById("mercado-pago-btn");
     const transferenciaBtn = document.getElementById("transferencia-btn");
-    const nameElement = document.getElementById("name");
+    const nameElement = document.getElementById("nombre");
     const cvuElement = document.getElementById("cvu");
     const aliasElement = document.getElementById("alias");
     const cuitElement = document.getElementById("cuit");
