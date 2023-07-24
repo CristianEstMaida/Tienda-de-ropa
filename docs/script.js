@@ -109,6 +109,9 @@
     const itemsPerPage = 4;
     let currentPage = 1;
 
+    // Agregar el evento click al botón
+    searchProductsTitle.addEventListener("click", searchProducts);
+
     // Función para cambiar el idioma
     function changeLanguage() {
       const selectedLanguage = languageSelect.value;
