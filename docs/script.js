@@ -110,7 +110,7 @@
     let currentPage = 1;
 
     // Agregar el evento click al botón
-    searchProductsTitle.addEventListener("click", searchProducts);
+    //searchProductsTitle.addEventListener("click", searchProducts);
 
     // Función para cambiar el idioma
     function changeLanguage() {
@@ -175,6 +175,8 @@
       searchProductsTitle.innerText = languageTexts.searchProductsTitle;
       // Actualizar los productos según el idioma seleccionado
       products.splice(0, products.length, ...languageProducts); // Reemplazar los productos con los correspondientes al idioma seleccionado
+      // Agregar el evento click al botón
+      searchProductsTitle.addEventListener("click", searchProducts(priceLabel, addToCartBtnText));
       showProducts(priceLabel, addToCartBtnText); // Mostrar los productos actualizados
       generatePagination();
     }
