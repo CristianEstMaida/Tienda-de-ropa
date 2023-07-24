@@ -129,6 +129,7 @@
 
     // Definir el arreglo de productos actual
     let products = [];
+    let languageTexts;
     const itemsPerPage = 4;
     let currentPage = 1;
 
@@ -138,12 +139,13 @@
     // Función para cambiar el idioma
     function changeLanguage(searchProductsTitle) {
       const selectedLanguage = languageSelect.value;
-      const languageTexts = languages[selectedLanguage];
+      
       const languageProducts = productsTexts[selectedLanguage];
       const priceLabel = languageTexts.priceLabel;
       const addToCartBtnText = languageTexts.addToCartBtn;
       const searchBtnText = languageTexts.searchProductsTitle;
-
+      languageTexts = languages[selectedLanguage]; // Assign the languageTexts at the global scope
+        
       // Obtener el texto para el párrafo "Precio:" y el botón "Agregar al carrito"
       //const priceLabelText = languageTexts.priceLabel;
       //const addToCartButtonText = languageTexts.addToCartButton;
@@ -215,7 +217,7 @@
     languageSelect.addEventListener("change", changeLanguage);
 
     // Cambiar el idioma inicialmente
-    changeLanguage(searchProductsTitle );
+    changeLanguage(searchProductsTitle);
     //generatePagination();
 
     const contactForm = document.getElementById("contact-form");
