@@ -354,7 +354,7 @@
     }
 
     // Función para buscar productos
-    function searchProducts() {
+    function searchProducts(priceLabel, addToCartBtnText) {
     const searchInput = document.getElementById("search-input");
     const searchTerm = searchInput.value.toLowerCase().trim();
 
