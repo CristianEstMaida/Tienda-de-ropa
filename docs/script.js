@@ -460,6 +460,13 @@
     }
     }
 
+    // Agregar el evento click al botón "Buscar"
+    searchProductsTitle.addEventListener("click", () => {
+      const priceLabel = languages[languageSelect.value].priceLabel;
+      const addToCartBtnText = languages[languageSelect.value].addToCartBtn;
+      searchProducts(priceLabel, addToCartBtnText);
+    });
+
     // Mostrar productos y generar paginación inicial
     
     //showProducts();
