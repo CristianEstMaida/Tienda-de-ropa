@@ -23,7 +23,9 @@
         makePayment: "Realizar pago en Mercado Pago",
         transferPayment: "Realizar transferencia bancaria",
         cvuTitle: "Número de CVU",
+        nameExampleTitle: "Nombre",
         aliasTitle: "Alias",
+        name: "Cristian Esteban Maida",
         cvuEjemplo: "0000003100078348355281",
         aliasEjemplo: "angus.rito.apios.mp",
         homeDelivery: "Envío a domicilio",
@@ -56,9 +58,11 @@
         shoppingCart: "Shopping cart",
         makePayment: "Make payment in Mercado Pago",
         transferPayment: "Make bank transfer",
+        nameExampleTitle: "Name",
         cvuTitle: "CBU Number",
         aliasTitle: "Alias",
         cvuEjemplo: "0110052531005208960734",
+        name: "Cristian Esteban Maida",
         aliasEjemplo: "ALARMA.PUERTA.GATA",
         homeDelivery: "Home delivery",
         nameTitle: "Name",
@@ -112,6 +116,7 @@
     // Actualizar el contenido de los botones de compra
     const mercadoPagoBtn = document.getElementById("mercado-pago-btn");
     const transferenciaBtn = document.getElementById("transferencia-btn");
+    const nameElement = document.getElementById("name");
     const cvuElement = document.getElementById("cvu");
     const aliasElement = document.getElementById("alias");
     const cuitElement = document.getElementById("cuit");
@@ -163,6 +168,7 @@
       shoppingCart.innerText = languageTexts.shoppingCart;
       mercadoPagoBtn.innerText = languageTexts.makePayment;
       transferenciaBtn.innerText = languageTexts.transferPayment;
+      nameElement.innerText = languageTexts.nameExampleTitle + ": " + languageTexts.name;
       cvuElement.innerText = languageTexts.cvuTitle + ": " + languageTexts.cvuEjemplo;
       aliasElement.innerText = languageTexts.aliasTitle + ": " + languageTexts.aliasEjemplo;
       homeDelivery.innerText = languageTexts.homeDelivery;
