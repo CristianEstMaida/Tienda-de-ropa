@@ -161,6 +161,7 @@
       makePayment.innerText = languageTexts.makePayment;
       jacketTitle.innerText = languageTexts.jacketTitle;  
       priceJacket.innerText = languageTexts.priceJacket;
+      searchProductsTitle.innerText = languageTexts.searchProductsTitle;
       productsTitle.innerText = languageTexts.productsTitle;
       addJacket.innerText = languageTexts.addJacket;
       //priceLabelElement.innerText = priceLabel;
