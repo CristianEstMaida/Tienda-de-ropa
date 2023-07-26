@@ -136,7 +136,7 @@
     let languageTexts;
     const itemsPerPage = 4;
     let currentPage = 1;
-
+    let deleteButtonText;
     // Agregar el evento click al botón
     //searchProductsTitle.addEventListener("click", searchProducts);
 
@@ -149,7 +149,7 @@
       const priceLabel = languageTexts.priceLabel;
       const addToCartBtnText = languageTexts.addToCartBtn;
       const searchBtnText = languageTexts.searchProductsTitle;
-      const deleteButtonText = languageTexts.deleteButton;
+      deleteButtonText = languageTexts.deleteButton;
         
       // Obtener el texto para el párrafo "Precio:" y el botón "Agregar al carrito"
       //const priceLabelText = languageTexts.priceLabel;
@@ -327,21 +327,21 @@
     }
     
     // Función para agregar un producto al carrito
-    function addToCart(product, deleteButtonText) {
+    function addToCart(product) {
       cartItems.push(product);
       cartTotal += product.price;
-      updateCart(deleteButtonText);
+      updateCart();
     }
 
     // Función para eliminar un producto del carrito
     function removeFromCart(index, deleteButtonText) {
       const removedItem = cartItems.splice(index, 1)[0];
       cartTotal -= removedItem.price;
-      updateCart(deleteButtonText);
+      updateCart();
     }
 
     // Función para actualizar la visualización del carrito
-    function updateCart(deleteButtonText) {
+    function updateCart() {
       const cartItemsContainer = document.getElementById("cart-items");
       cartItemsContainer.innerHTML = "";
 
