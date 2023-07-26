@@ -28,6 +28,7 @@
         name: "Cristian Esteban Maida",
         cvuEjemplo: "0000003100078348355281",
         aliasEjemplo: "angus.rito.apios.mp",
+        deleteButton: "Eliminar",
         homeDelivery: "Envío a domicilio",
         nameTitle: "Nombre",
         emailTitle: "Correo electrónico",
@@ -64,6 +65,7 @@
         cvuEjemplo: "0110052531005208960734",
         name: "Cristian Esteban Maida",
         aliasEjemplo: "ALARMA.PUERTA.GATA",
+        deleteButton: "Remove",
         homeDelivery: "Home delivery",
         nameTitle: "Name",
         emailTitle: "Email",
@@ -147,6 +149,7 @@
       const priceLabel = languageTexts.priceLabel;
       const addToCartBtnText = languageTexts.addToCartBtn;
       const searchBtnText = languageTexts.searchProductsTitle;
+      const deleteButtonText = languageTexts.deleteButton;
         
       // Obtener el texto para el párrafo "Precio:" y el botón "Agregar al carrito"
       //const priceLabelText = languageTexts.priceLabel;
@@ -202,7 +205,13 @@
           button.innerText = addToCartBtnText;
         }
       });
-    
+      
+      // Update the "Eliminar" buttons with the appropriate text for the selected language
+      const deleteButtons = document.querySelectorAll(".cart-item button");
+      deleteButtons.forEach((button) => {
+        button.innerText = deleteButtonText;
+      });
+      
       // Obtener el texto del placeholder en el idioma seleccionado
       const placeholderText = languageTexts.searchPlaceholder;
       // Modificar el texto del placeholder
@@ -325,14 +334,14 @@
     }
 
     // Función para eliminar un producto del carrito
-    function removeFromCart(index) {
+    function removeFromCart(index, deleteButtonText) {
       const removedItem = cartItems.splice(index, 1)[0];
       cartTotal -= removedItem.price;
-      updateCart();
+      updateCart(deleteButtonText);
     }
 
     // Función para actualizar la visualización del carrito
-    function updateCart() {
+    function updateCart(deleteButtonText) {
       const cartItemsContainer = document.getElementById("cart-items");
       cartItemsContainer.innerHTML = "";
 
@@ -342,7 +351,7 @@
         cartItem.innerHTML = `
           <img src="${product.image}" alt="${product.name}">
           <p>${product.name} - $${product.price}</p>
-          <button id="eliminar" onclick="removeFromCart(${index})">Eliminar</button>
+          <button id="eliminar" onclick="removeFromCart(${index})" data-delete-text="${deleteButtonText}">${deleteButtonText}</button>
         `;
 
         cartItemsContainer.appendChild(cartItem);
