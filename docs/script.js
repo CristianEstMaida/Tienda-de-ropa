@@ -29,6 +29,7 @@
         cvuEjemplo: "0000003100078348355281",
         aliasEjemplo: "angus.rito.apios.mp",
         deleteButton: "Eliminar",
+        cartTotalText: "Total:",
         homeDelivery: "Envío a domicilio",
         nameTitle: "Nombre",
         emailTitle: "Correo electrónico",
@@ -66,6 +67,7 @@
         name: "Cristian Esteban Maida",
         aliasEjemplo: "ALARMA.PUERTA.GATA",
         deleteButton: "Remove",
+        cartTotalText: "Cart Total:",
         homeDelivery: "Home delivery",
         nameTitle: "Name",
         emailTitle: "Email",
@@ -149,6 +151,9 @@
       const priceLabel = languageTexts.priceLabel;
       const addToCartBtnText = languageTexts.addToCartBtn;
       const searchBtnText = languageTexts.searchProductsTitle;
+      // Obtener el texto para el total del carrito
+      const cartTotalText = languageTexts.cartTotalText;
+
       deleteButtonText = languageTexts.deleteButton;
         
       // Obtener el texto para el párrafo "Precio:" y el botón "Agregar al carrito"
@@ -178,6 +183,7 @@
       mercadoPagoBtn.innerText = languageTexts.makePayment;
       transferenciaBtn.innerText = languageTexts.transferPayment;
       realizarCompraBtn.innerText = languageTexts.makePaymentBtn;
+      cartTotalElement.innerText = cartTotalText + " $" + cartTotal.toFixed(2);
       nameElement.innerText = languageTexts.nameExampleTitle + ": " + languageTexts.name;
       cvuElement.innerText = languageTexts.cvuTitle + ": " + languageTexts.cvuEjemplo;
       aliasElement.innerText = languageTexts.aliasTitle + ": " + languageTexts.aliasEjemplo;
