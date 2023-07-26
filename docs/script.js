@@ -220,7 +220,7 @@
       // Actualizar los productos según el idioma seleccionado
       products.splice(0, products.length, ...languageProducts); // Reemplazar los productos con los correspondientes al idioma seleccionado
       // Agregar el evento click al botón
-      searchProductsBtn.addEventListener("click", searchProducts(priceLabel, addToCartBtnText, searchBtnText));
+      searchProductsBtn.addEventListener("click", searchProducts(priceLabel, addToCartBtnText, searchBtnText, deleteButtonText));
       showProducts(priceLabel, addToCartBtnText); // Mostrar los productos actualizados
       generatePagination();
     }
@@ -327,10 +327,10 @@
     }
     
     // Función para agregar un producto al carrito
-    function addToCart(product) {
+    function addToCart(product, deleteButtonText) {
       cartItems.push(product);
       cartTotal += product.price;
-      updateCart();
+      updateCart(deleteButtonText);
     }
 
     // Función para eliminar un producto del carrito
@@ -403,7 +403,7 @@
     }
 
     // Función para buscar productos
-    function searchProducts(priceLabel, addToCartBtnText, searchBtnText) {
+    function searchProducts(priceLabel, addToCartBtnText, searchBtnText, deleteButtonText) {
     const searchInput = document.getElementById("search-input");
     const searchTerm = searchInput.value.toLowerCase().trim();
 
@@ -423,7 +423,7 @@
             <h3>${product.name}</h3>
             <p="price-label">${priceLabel} $${product.price}</p>
             <p>${product.description}</p>
-            <button id="add-to-cart-btn" data-lang="Add to cart" onclick="addToCart({ name: '${product.name}', price: ${product.price}, image: '${product.image}' })">${addToCartBtnText}</button>
+            <button id="add-to-cart-btn" data-lang="Add to cart" onclick="addToCart({ name: '${product.name}', price: ${product.price}, image: '${product.image}' }, deleteButtonText)">${addToCartBtnText}</button>
         `;
 
         productList.appendChild(productDiv);
