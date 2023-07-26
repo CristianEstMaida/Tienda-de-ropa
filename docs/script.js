@@ -29,7 +29,7 @@
         cvuEjemplo: "0000003100078348355281",
         aliasEjemplo: "angus.rito.apios.mp",
         deleteButton: "Eliminar",
-        cartTotalText: "Total:",
+        cartTotalText: "Total del carrito:",
         homeDelivery: "Envío a domicilio",
         nameTitle: "Nombre",
         emailTitle: "Correo electrónico",
