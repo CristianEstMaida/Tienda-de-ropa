@@ -117,6 +117,7 @@
     //const priceLabels = document.querySelectorAll(".product p.price");
     //const addToCartButtons = document.querySelectorAll(".product button");
     const shoppingCart = document.getElementById("shopping-cart");
+    const cartTotalElement = document.getElementById("cart-total-text");
     const homeDelivery = document.getElementById("home-delivery");
     // Actualizar el contenido de los botones de compra
     const mercadoPagoBtn = document.getElementById("mercado-pago-btn");
@@ -131,7 +132,6 @@
     const addressTitle = document.getElementById("address-title");
     const submitTitle = document.getElementById("submit-title");
     const footerCopyright = document.getElementById("footer-copyright");
-
 
     // Definir el arreglo de productos actual
     let products = [];
