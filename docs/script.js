@@ -174,7 +174,7 @@
       shoppingCart.innerText = languageTexts.shoppingCart;
       mercadoPagoBtn.innerText = languageTexts.makePayment;
       transferenciaBtn.innerText = languageTexts.transferPayment;
-      realizarCompraBtn.innerText = languageTexts.makePayment;
+      realizarCompraBtn.innerText = languageTexts.makePaymentBtn;
       nameElement.innerText = languageTexts.nameExampleTitle + ": " + languageTexts.name;
       cvuElement.innerText = languageTexts.cvuTitle + ": " + languageTexts.cvuEjemplo;
       aliasElement.innerText = languageTexts.aliasTitle + ": " + languageTexts.aliasEjemplo;
