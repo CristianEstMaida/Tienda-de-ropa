@@ -58,7 +58,7 @@
         shoppingCart: "Shopping cart",
         makePayment: "Make payment in Mercado Pago",
         transferPayment: "Make bank transfer",
-        makePaymentBtn: "Marke payment",
+        makePaymentBtn: "Make payment",
         nameExampleTitle: "Name",
         cvuTitle: "CBU Number",
         aliasTitle: "Alias",
