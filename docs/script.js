@@ -139,6 +139,7 @@
     const itemsPerPage = 4;
     let currentPage = 1;
     let deleteButtonText;
+    let cartTotal = 0;
     // Agregar el evento click al botón
     //searchProductsTitle.addEventListener("click", searchProducts);
 
@@ -262,7 +263,7 @@
     });
     // Función para buscar productos
     let cartItems = [];
-    let cartTotal = 0;
+    //let cartTotal = 0;
     
     //
     
