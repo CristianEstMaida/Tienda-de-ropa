@@ -8,7 +8,6 @@
         highlightedProductsTitle: "Productos destacados",
         tShirtTitle: "Remera",
         priceTShirt: "Precio: $2999.99",
-        makePayment: "Realizar pago en Mercado Pago",
         addTShirt: "Agregar al carrito",
         jacketTitle: "Campera",
         priceJacket: "Precio: $14999.99",
@@ -22,6 +21,7 @@
         shoppingCart: "Carrito de compras",
         makePayment: "Realizar pago en Mercado Pago",
         transferPayment: "Realizar transferencia bancaria",
+        makePaymentBtn: "Realizar compra",
         cvuTitle: "Número de CVU",
         nameExampleTitle: "Nombre",
         aliasTitle: "Alias",
@@ -44,7 +44,6 @@
         highlightedProductsTitle: "Featured products",
         tShirtTitle: "T-shirt",
         priceTShirt: "Price: $2999.99",
-        makePayment: "Make payment in Mercado Pago",
         addTShirt: "Add to cart",
         jacketTitle: "Jacket",
         priceJacket: "Price: $14999.99",
@@ -58,6 +57,7 @@
         shoppingCart: "Shopping cart",
         makePayment: "Make payment in Mercado Pago",
         transferPayment: "Make bank transfer",
+        makePaymentBtn: "Marke payment",
         nameExampleTitle: "Name",
         cvuTitle: "CBU Number",
         aliasTitle: "Alias",
@@ -174,6 +174,7 @@
       shoppingCart.innerText = languageTexts.shoppingCart;
       mercadoPagoBtn.innerText = languageTexts.makePayment;
       transferenciaBtn.innerText = languageTexts.transferPayment;
+      realizarCompraBtn.innerText = languageTexts.makePayment;
       nameElement.innerText = languageTexts.nameExampleTitle + ": " + languageTexts.name;
       cvuElement.innerText = languageTexts.cvuTitle + ": " + languageTexts.cvuEjemplo;
       aliasElement.innerText = languageTexts.aliasTitle + ": " + languageTexts.aliasEjemplo;
