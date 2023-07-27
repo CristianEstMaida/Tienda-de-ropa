@@ -29,7 +29,12 @@
         cvuEjemplo: "0000003100078348355281",
         aliasEjemplo: "angus.rito.apios.mp",
         deleteButton: "Eliminar",
+        //cartTotalText: "Total del carrito:",
         cartTotalText: "Total del carrito:",
+        budgetText: "Presupuesto",
+        productsText: "Productos",
+        emptyCartMessage: "El carrito está vacío. Por favor, agrega productos antes de realizar la compra.",
+
         homeDelivery: "Envío a domicilio",
         nameTitle: "Nombre",
         emailTitle: "Correo electrónico",
@@ -67,7 +72,12 @@
         name: "Cristian Esteban Maida",
         aliasEjemplo: "ALARMA.PUERTA.GATA",
         deleteButton: "Remove",
+        //cartTotalText: "Cart Total:",
         cartTotalText: "Cart Total:",
+        budgetText: "Budget",
+        productsText: "Products",
+        emptyCartMessage: "The cart is empty. Please add products before making the purchase.",
+
         homeDelivery: "Home delivery",
         nameTitle: "Name",
         emailTitle: "Email",
@@ -288,19 +298,28 @@
       //const cartItemsContainer = getCartItems();
       //const cartTotalElement = getCartTotal();
 
-   
+      const cartTotalText = languageTexts.cartTotalText;
+      const budgetText = languageTexts.budgetText;
+      const productsText = languageTexts.productsText;
+      
+      // Crear el contenido del PDF con los textos en el idioma seleccionado
+      const content = `${budgetText}\n\n${productsText}:\n${cartItems.map((product) => `${product.name} - $${product.price}`).join("\n")}\n${cartTotalText}: $${cartTotal.toFixed(2)}`;
+
       // Configurar el contenido del PDF
-      const content = `Presupuesto\n\nProductos:\n${cartItems.map((product) => `${product.name} - $${product.price}`).join("\n")}\nTotal: $${cartTotal}`;
+      //const content = `Presupuesto\n\nProductos:\n${cartItems.map((product) => `${product.name} - $${product.price}`).join("\n")}\nTotal: $${cartTotal}`;
 
       // Agregar el contenido al PDF
       if (cartItems.length === 0) {
-          alert("El carrito está vacío. Por favor, agrega productos antes de realizar la compra.");
+          alert(languageTexts.emptyCartMessage); // Mensaje en caso de carrito vacío
+
+          //alert("El carrito está vacío. Por favor, agrega productos antes de realizar la compra.");
           return;
       }
       else {
         doc.setFontSize(12);
         doc.text(content, 10, 10, { align: "left" });
-        doc.save('comprobante.pdf');
+        //doc.save('comprobante.pdf');
+        doc.save('presupesto.pdf');
       }
       // Opciones de configuración para el método fromHTML
       const options = {
