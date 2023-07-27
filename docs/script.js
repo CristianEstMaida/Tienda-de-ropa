@@ -319,7 +319,7 @@
         doc.setFontSize(12);
         doc.text(content, 10, 10, { align: "left" });
         //doc.save('comprobante.pdf');
-        doc.save('presupesto.pdf');
+        doc.save(${budgetText});
       }
       // Opciones de configuración para el método fromHTML
       const options = {
