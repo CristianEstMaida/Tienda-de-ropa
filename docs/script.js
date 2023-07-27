@@ -299,11 +299,11 @@
       //const cartTotalElement = getCartTotal();
 
       const cartTotalText = languageTexts.cartTotalText;
-      const budgetText = languageTexts.budgetText;
+      const pdfTitle = languageTexts.budgetText;
       const productsText = languageTexts.productsText;
       
       // Crear el contenido del PDF con los textos en el idioma seleccionado
-      const content = `${budgetText}\n\n${productsText}:\n${cartItems.map((product) => `${product.name} - $${product.price}`).join("\n")}\n${cartTotalText} $${cartTotal.toFixed(2)}`;
+      const content = `${pdfTitle}\n\n${productsText}:\n${cartItems.map((product) => `${product.name} - $${product.price}`).join("\n")}\n${cartTotalText} $${cartTotal.toFixed(2)}`;
 
       // Configurar el contenido del PDF
       //const content = `Presupuesto\n\nProductos:\n${cartItems.map((product) => `${product.name} - $${product.price}`).join("\n")}\nTotal: $${cartTotal}`;
@@ -319,7 +319,7 @@
         doc.setFontSize(12);
         doc.text(content, 10, 10, { align: "left" });
         //doc.save('comprobante.pdf');
-        doc.save(`${budgetText}.pdf`);
+        doc.save(`${pdfTitle}.pdf`);
       }
       // Opciones de configuración para el método fromHTML
       const options = {
