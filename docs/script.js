@@ -91,13 +91,13 @@
     // Definir los textos de los productos en diferentes idiomas
     const productsTexts = {
       es: [
-        { type: "remera", name: "Remera rockera", price: 2999.99, image: "remera.jpg", description: "Sumérgete en el mundo del rock con esta espectacular remera." },
-        { type: "campera", name: "Campera de cuero", price: 14999.99, image: "campera.jpg", description: "Descubre el equilibrio perfecto entre estilo y funcionalidad con esta impresionante campera de cuero." },
+        { type: "remera", name: "Remera rockera", price: 2999.99, image: "product1.jpg", description: "Sumérgete en el mundo del rock con esta espectacular remera." },
+        { type: "campera", name: "Campera de cuero", price: 14999.99, image: "product2.jp", description: "Descubre el equilibrio perfecto entre estilo y funcionalidad con esta impresionante campera de cuero." },
         // Agrega más productos aquí
       ],
       en: [
-        { type: "t-shirt", name: "Rock T-shirt", price: 2999.99, image: "t-shirt.jpg", description: "Immerse yourself in the world of rock with this spectacular T-shirt." },
-        { type: "jacket", name: "Leather Jacket", price: 14999.99, image: "jacket.jpg", description: "Discover the perfect balance between style and functionality with this stunning leather jacket." },
+        { type: "t-shirt", name: "Rock T-shirt", price: 2999.99, image: "product1.jpg", description: "Immerse yourself in the world of rock with this spectacular T-shirt." },
+        { type: "jacket", name: "Leather Jacket", price: 14999.99, image: "product2.jp", description: "Discover the perfect balance between style and functionality with this stunning leather jacket." },
         // Agrega más productos aquí
       ]
     };
