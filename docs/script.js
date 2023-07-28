@@ -92,12 +92,12 @@
     const productsTexts = {
       es: [
         { type: "remera", name: "Remera rockera", price: 2999.99, image: "product1.jpg", description: "Sumérgete en el mundo del rock con esta espectacular remera." },
-        { type: "campera", name: "Campera de cuero", price: 14999.99, image: "product2.jp", description: "Descubre el equilibrio perfecto entre estilo y funcionalidad con esta impresionante campera de cuero." },
+        { type: "campera", name: "Campera vaquera", price: 14999.99, image: "product2.jpg", description: "Descubre el equilibrio perfecto entre estilo y funcionalidad con esta impresionante campera vaquera." },
         // Agrega más productos aquí
       ],
       en: [
         { type: "t-shirt", name: "Rock T-shirt", price: 2999.99, image: "product1.jpg", description: "Immerse yourself in the world of rock with this spectacular T-shirt." },
-        { type: "jacket", name: "Leather Jacket", price: 14999.99, image: "product2.jp", description: "Discover the perfect balance between style and functionality with this stunning leather jacket." },
+        { type: "jacket", name: "Denim Jacket", price: 14999.99, image: "product2.jpg", description: "Discover the perfect balance between style and functionality with this stunning denim jacket." },
         // Agrega más productos aquí
       ]
     };
