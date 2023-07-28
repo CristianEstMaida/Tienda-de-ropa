@@ -92,20 +92,28 @@
     const productsTexts = {
       es: [
         { type: "remera", name: "Remera rockera", price: 2999.99, image: "product1.jpg", description: "Sumérgete en el mundo del rock con esta espectacular remera." },
-        { type: "campera", name: "Campera vaquera", price: 14999.99, image: "product2.jpg", description: "Descubre el equilibrio perfecto entre estilo y funcionalidad con esta impresionante campera vaquera." },
-        { type: "campera", name: "Campera de cuero", price: 14999.99, image: "product3.jpg", description: "Descubre el equilibrio perfecto entre estilo y funcionalidad con esta impresionante campera de cuero." },
-        { type: "campera", name: "Campera vaquera", price: 14999.99, image: "product4.jpg", description: "Descubre el equilibrio perfecto entre estilo y funcionalidad con esta impresionante campera vaquera." },
-        { type: "campera", name: "Campera de cuero", price: 14999.99, image: "product5.jpg", description: "Descubre el equilibrio perfecto entre estilo y funcionalidad con esta impresionante campera de cuero." },
-        { type: "campera", name: "Campera de nylon", price: 14999.99, image: "product6.jpg", description: "Descubre el equilibrio perfecto entre estilo y funcionalidad con esta impresionante campera de nylon." }
+        { type: "remera", name: "Remera rockera", price: 2999.99, image: "product2.jpg", description: "Sumérgete en el mundo del rock con esta espectacular remera." },
+        { type: "remera", name: "Remera rockera", price: 2999.99, image: "product3.jpg", description: "Sumérgete en el mundo del rock con esta espectacular remera." },
+        { type: "remera", name: "Remera rockera", price: 2999.99, image: "product4.jpg", description: "Sumérgete en el mundo del rock con esta espectacular remera." },
+        { type: "remera", name: "Remera rockera", price: 2999.99, image: "product5.jpg", description: "Sumérgete en el mundo del rock con esta espectacular remera." },
+        { type: "campera", name: "Campera vaquera", price: 14999.99, image: "product6.jpg", description: "Descubre el equilibrio perfecto entre estilo y funcionalidad con esta impresionante campera vaquera." },
+        { type: "campera", name: "Campera de cuero", price: 14999.99, image: "product7.jpg", description: "Descubre el equilibrio perfecto entre estilo y funcionalidad con esta impresionante campera de cuero." },
+        { type: "campera", name: "Campera vaquera", price: 14999.99, image: "product8.jpg", description: "Descubre el equilibrio perfecto entre estilo y funcionalidad con esta impresionante campera vaquera." },
+        { type: "campera", name: "Campera de cuero", price: 14999.99, image: "product9.jpg", description: "Descubre el equilibrio perfecto entre estilo y funcionalidad con esta impresionante campera de cuero." },
+        { type: "campera", name: "Campera de nylon", price: 14999.99, image: "product10.jpg", description: "Descubre el equilibrio perfecto entre estilo y funcionalidad con esta impresionante campera de nylon." }
         // Agrega más productos aquí
       ],
       en: [
         { type: "t-shirt", name: "Rock T-shirt", price: 2999.99, image: "product1.jpg", description: "Immerse yourself in the world of rock with this spectacular T-shirt." },
-        { type: "jacket", name: "Denim jacket", price: 14999.99, image: "product2.jpg", description: "Discover the perfect balance between style and functionality with this stunning denim jacket." },
-        { type: "jacket", name: "Leather jacket", price: 14999.99, image: "product3.jpg", description: "Discover the perfect balance between style and functionality with this stunning leather jacket." },
-        { type: "jacket", name: "Denim jacket", price: 14999.99, image: "product4.jpg", description: "Discover the perfect balance between style and functionality with this stunning denim jacket." },
-        { type: "jacket", name: "Leather jacket", price: 14999.99, image: "product5.jpg", description: "Discover the perfect balance between style and functionality with this stunning leather jacket." },
-        { type: "jacket", name: "Nylon jacket", price: 14999.99, image: "product6.jpg", description: "Discover the perfect balance between style and functionality with this stunning nyylon jacket." }
+        { type: "t-shirt", name: "Rock T-shirt", price: 2999.99, image: "product2.jpg", description: "Immerse yourself in the world of rock with this spectacular T-shirt." },
+        { type: "t-shirt", name: "Rock T-shirt", price: 2999.99, image: "product3.jpg", description: "Immerse yourself in the world of rock with this spectacular T-shirt." },
+        { type: "t-shirt", name: "Rock T-shirt", price: 2999.99, image: "product4.jpg", description: "Immerse yourself in the world of rock with this spectacular T-shirt." },
+        { type: "t-shirt", name: "Rock T-shirt", price: 2999.99, image: "product5.jpg", description: "Immerse yourself in the world of rock with this spectacular T-shirt." },
+        { type: "jacket", name: "Denim jacket", price: 14999.99, image: "product6.jpg", description: "Discover the perfect balance between style and functionality with this stunning denim jacket." },
+        { type: "jacket", name: "Leather jacket", price: 14999.99, image: "product7.jpg", description: "Discover the perfect balance between style and functionality with this stunning leather jacket." },
+        { type: "jacket", name: "Denim jacket", price: 14999.99, image: "product8.jpg", description: "Discover the perfect balance between style and functionality with this stunning denim jacket." },
+        { type: "jacket", name: "Leather jacket", price: 14999.99, image: "product9.jpg", description: "Discover the perfect balance between style and functionality with this stunning leather jacket." },
+        { type: "jacket", name: "Nylon jacket", price: 14999.99, image: "product10.jpg", description: "Discover the perfect balance between style and functionality with this stunning nyylon jacket." }
         // Agrega más productos aquí
       ]
     };
