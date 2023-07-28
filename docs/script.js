@@ -97,7 +97,7 @@
       ],
       en: [
         { type: "t-shirt", name: "Rock T-shirt", price: 2999.99, image: "product1.jpg", description: "Immerse yourself in the world of rock with this spectacular T-shirt." },
-        { type: "jacket", name: "Denim Jacket", price: 14999.99, image: "product2.jpg", description: "Discover the perfect balance between style and functionality with this stunning denim jacket." },
+        { type: "jacket", name: "Denim jacket", price: 14999.99, image: "product2.jpg", description: "Discover the perfect balance between style and functionality with this stunning denim jacket." },
         // Agrega más productos aquí
       ]
     };
