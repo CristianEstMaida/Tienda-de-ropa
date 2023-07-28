@@ -91,6 +91,18 @@
     // Definir los textos de los productos en diferentes idiomas
     const productsTexts = {
       es: [
+        { type: "remera", name: "Remera rockera", price: 2999.99, image: "remera.jpg", description: "Sumérgete en el mundo del rock con esta espectacular remera." },
+        { type: "campera", name: "Campera de cuero", price: 14999.99, image: "campera.jpg", description: "Descubre el equilibrio perfecto entre estilo y funcionalidad con esta impresionante campera de cuero." },
+        // Agrega más productos aquí
+      ],
+      en: [
+        { type: "t-shirt", name: "Rock T-shirt", price: 2999.99, image: "t-shirt.jpg", description: "Immerse yourself in the world of rock with this spectacular T-shirt." },
+        { type: "jacket", name: "Leather Jacket", price: 14999.99, image: "jacket.jpg", description: "Discover the perfect balance between style and functionality with this stunning leather jacket." },
+        // Agrega más productos aquí
+      ]
+    };
+    /*const productsTexts = {
+      es: [
         { name: "Remera", price: 2999.99, image: 'product1.jpg', description: "Sumérgete en el mundo del rock con esta espectacular remera." },
         { name: "Campera", price: 14999.99, image: 'product2.jpg', description: "Descubre el equilibrio perfecto entre estilo y funcionalidad con esta impresionante campera." },
         // Agrega más productos aquí
@@ -100,7 +112,7 @@
         { name: "Jacket", price: 14999.99, image: 'product2.jpg', description: "Discover the perfect balance between style and functionality with this stunning jacket." },
         // Agrega más productos aquí
       ]
-    };
+    };*/
 
     // Obtener elementos del DOM
     const onlineStore = document.getElementById("online-store");
@@ -142,6 +154,10 @@
     const addressTitle = document.getElementById("address-title");
     const submitTitle = document.getElementById("submit-title");
     const footerCopyright = document.getElementById("footer-copyright");
+    // Obtener los botones para filtrar por tipo de ropa
+    const showTShirtsBtn = document.getElementById("show-tshirts-btn");
+    const showJacketsBtn = document.getElementById("show-jackets-btn");
+
 
     // Definir el arreglo de productos actual
     let products = [];
@@ -238,7 +254,19 @@
       products.splice(0, products.length, ...languageProducts); // Reemplazar los productos con los correspondientes al idioma seleccionado
       // Agregar el evento click al botón
       searchProductsBtn.addEventListener("click", searchProducts(priceLabel, addToCartBtnText, searchBtnText, deleteButtonText));
-      showProducts(priceLabel, addToCartBtnText); // Mostrar los productos actualizados
+      // Evento click para mostrar solo remeras
+      showTShirtsBtn.addEventListener("click", () => {
+        const typeToShow = "remera";
+        showProducts(typeToShow, priceLabel, addToCartBtnText);
+      });
+    
+      // Evento click para mostrar solo camperas
+      showJacketsBtn.addEventListener("click", () => {
+        const typeToShow = "campera";
+        showProducts(typeToShow, priceLabel, addToCartBtnText);
+      });
+      const typeToShow = "";
+      showProducts(typeToShow, priceLabel, addToCartBtnText); // Mostrar los productos actualizados
       generatePagination();
     }
 
@@ -471,7 +499,7 @@
     //let currentPage = 1;
 
     // Función para mostrar los productos en la página actual
-    function showProducts(priceLabel, addToCartBtnText) {
+    function showProducts(typeToShow,priceLabel, addToCartBtnText) {
     const productList = document.getElementById("product-list");
     productList.innerHTML = "";
 
@@ -481,26 +509,29 @@
     for (let i = startIndex; i < endIndex && i < products.length; i++) {
         const product = products[i];
 
-        const productDiv = document.createElement("div");
-        productDiv.classList.add("product");
-        productDiv.innerHTML = `
-          <!--div class="product"-->
-            <img src="product${i + 1}.jpg" alt="${product.name}">
-            <h3>${product.name}</h3>
-            <p="price-label">${priceLabel} $${product.price}</p>
-            <p>${product.description}</p>
-            <button id="add-to-cart-btn" data-lang="Add to cart" onclick="addToCart({ name: '${product.name}', price: ${product.price}, image: '${product.image}' })">${addToCartBtnText}</button>
-          <!--/div-->
-        `;
-
-        productList.appendChild(productDiv);
-
-        // Actualizar el contenido del párrafo "Precio:" y el botón "Agregar al carrito"
-        const priceLabelElement = productDiv.querySelector("#price-label");
-        const addToCartBtnElement = productDiv.querySelector("#add-to-cart-btn");
+        // Filtrar productos por tipo de ropa
+        if (!typeToShow || product.type === typeToShow) {
+            const productDiv = document.createElement("div");
+            productDiv.classList.add("product");
+            productDiv.innerHTML = `
+              <!--div class="product"-->
+                <img src="product${i + 1}.jpg" alt="${product.name}">
+                <h3>${product.name}</h3>
+                <p="price-label">${priceLabel} $${product.price}</p>
+                <p>${product.description}</p>
+                <button id="add-to-cart-btn" data-lang="Add to cart" onclick="addToCart({ name: '${product.name}', price: ${product.price}, image: '${product.image}' })">${addToCartBtnText}</button>
+              <!--/div-->
+            `;
     
-        //priceLabelElement.innerText = priceLabel;
-        //addToCartBtnElement.innerText = addToCartBtnText;
+            productList.appendChild(productDiv);
+    
+            // Actualizar el contenido del párrafo "Precio:" y el botón "Agregar al carrito"
+            const priceLabelElement = productDiv.querySelector("#price-label");
+            const addToCartBtnElement = productDiv.querySelector("#add-to-cart-btn");
+        
+            //priceLabelElement.innerText = priceLabel;
+            //addToCartBtnElement.innerText = addToCartBtnText;
+        }   
     }
     }
 
